@@ -2,6 +2,7 @@ package com.github.victorMarchiDev;
 
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 /*
@@ -17,9 +18,9 @@ public class IsUnique {
         if(s.length() > NUMBER_OF_CHARS) return false;
 
         Set<Character> characters = new HashSet<>();
-        for(Character c : s.toCharArray()){
-            if(characters.contains(c)) return false;
-            characters.add(c);
+        for(char c : s.toCharArray()){
+            if(characters.contains(Optional.of(c))) return false;
+            characters.add(Character.valueOf(c));
         }
         return true;
     }
