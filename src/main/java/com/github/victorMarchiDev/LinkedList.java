@@ -22,6 +22,7 @@ public class LinkedList {
 		if(head.value == value) {
 			head = head.next;
 			return;
+		
 		}
 		
 		Node current = head;
